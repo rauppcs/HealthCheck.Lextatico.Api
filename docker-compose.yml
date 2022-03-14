@@ -1,0 +1,14 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  healthlextaticoapi:
+    image: ${DOCKER_REGISTRY-}healthlextaticoapi
+    container_name: health_lextatico_api
+    build:
+      context: .
+      dockerfile: src/Health.Lextatico.Api/Dockerfile
+    ports:
+      - 8000:8000
+      - 8001:8001
