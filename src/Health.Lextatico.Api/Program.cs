@@ -14,7 +14,17 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsProduction())
+{
+    app.UseDeveloperExceptionPage();
+}
+
+if (app.Environment.IsProduction())
+{
+    app.UseHttpsRedirection();
+
+    app.UseHsts();
+}
 
 app.UseAuthorization();
 
