@@ -44,7 +44,7 @@
                 "build"
             ],
             "dockerBuild": {
-                "tag": "healthchecklextaticoapi:dev",
+                "tag": "health:dev",
                 "target": "base",
                 "dockerfile": "${workspaceFolder}/src/Health.Lextatico.Api/Dockerfile",
                 "context": "${workspaceFolder}",
@@ -61,7 +61,7 @@
                 "build"
             ],
             "dockerBuild": {
-                "tag": "healthchecklextaticoapi:latest",
+                "tag": "health:latest",
                 "dockerfile": "${workspaceFolder}/src/Health.Lextatico.Api/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true

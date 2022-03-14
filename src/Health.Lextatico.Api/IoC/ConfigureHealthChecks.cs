@@ -9,7 +9,10 @@ namespace Health.Lextatico.Api.IoC
         {
             services.AddHealthChecks();
 
-            services.AddHealthChecksUI()
+            services.AddHealthChecksUI(settings =>
+            {
+                settings.SetHeaderText("MicroServices status");
+            })
                 .AddInMemoryStorage();
 
             return services;
