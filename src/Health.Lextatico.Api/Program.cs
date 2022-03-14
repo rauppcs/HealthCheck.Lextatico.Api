@@ -30,7 +30,7 @@ app.UseAuthorization();
 
 app.MapHealthChecksUI(options =>
 {
-    // options.AddCustomStylesheet("lextaticoStyle.css");
+    options.AddCustomStylesheet("lextaticoStyle.css");
 });
 
 app.MapControllers();

@@ -33,7 +33,7 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-    arguments: '--configuration $(buildConfiguration) --output --output $(Build.BinariesDirectory)/publish'
+    arguments: '--configuration $(buildConfiguration) --output $(Build.BinariesDirectory)/publish'
     zipAfterPublish: false
     modifyOutputPath: false
   
