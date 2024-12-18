@@ -1,6 +1,9 @@
+using Health.Lextatico.Api.Extensions;
 using Health.Lextatico.Api.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseLextaticoSerilog(builder.Environment, builder.Configuration);
 
 builder.Services.AddControllers();
 
